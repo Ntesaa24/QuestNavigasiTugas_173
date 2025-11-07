@@ -81,6 +81,67 @@ fun HalamanKedua(
                 }
             }
         }
+        Spacer(modifier = Modifier.height(20.dp))
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(all = 16.dp)
+                .height(height = 200.dp)
+                .border(
+                    width = 2.dp,
+                    color = colorResource(id = R.color.black),
+                    shape = RoundedCornerShape(16.dp)
+                ),
+            colors = CardDefaults.cardColors(containerColor = Color.LightGray)
+        ) {
+            Row {
+                Column(modifier = Modifier.padding(20.dp)) {
+                    Text("Nama Lengkap", fontWeight = FontWeight.Bold)
+                    Text("Nesa Destian")
 
+                    Spacer(modifier = Modifier.height(30.dp))
+
+                    Text("STATUS KAWIN", fontWeight = FontWeight.Bold)
+                    Text("Kawin")
+                }
+
+                Spacer(modifier = Modifier.height(20.dp))
+
+                Column(modifier = Modifier.padding(20.dp)) {
+                    Text("JENIS KELAMIN", fontWeight = FontWeight.Bold)
+                    Text("Perempuan")
+
+                    Spacer(modifier = Modifier.height(30.dp))
+
+                    Text("ALAMAT", fontWeight = FontWeight.Bold)
+                    Text("Jakarta")
+                }
+            }
+        }
+
+        Spacer(modifier = Modifier.height(100.dp))
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 16.dp),
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
+            Button(
+                onClick = { onBackBtnClick() },
+                shape = RoundedCornerShape(8.dp)
+            ) {
+                Text("Beranda")
+            }
+
+            Button(
+                onClick = { onBackBtnClick() },
+                shape = RoundedCornerShape(8.dp)
+            ) {
+                Text("Formulir")
+            }
+        }
+    }
+}
 
 
