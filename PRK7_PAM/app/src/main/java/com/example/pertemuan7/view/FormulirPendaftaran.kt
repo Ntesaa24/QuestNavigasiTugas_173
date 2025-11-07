@@ -67,4 +67,29 @@ fun FormulirPendaftaran (onBackbtnClick: () -> Unit,
             colors = CardDefaults.cardColors(
                 containerColor = colorResource(id = R.color.pink_tua)
             )
-        )
+        ){
+            Text(
+                text = "NAMA LENGKAP",
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp,
+                modifier = Modifier.align(Alignment.Start)
+                    .padding(top = 10.dp, start = 10.dp)
+            )
+            OutlinedTextField(
+                value = textNama,
+                shape = MaterialTheme.shapes.large,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 12.dp, end = 12.dp),
+                label = { Text(text = "Nama Lengkap", color = Color.DarkGray) },
+                onValueChange = { textNama = it }
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Text(
+                text = "JENIS KELAMIN",
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 20.sp,
+                modifier = Modifier
+                    .padding(top = 9.dp, start = 9.dp)
+            )
