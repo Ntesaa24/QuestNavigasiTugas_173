@@ -1,4 +1,4 @@
-package com.example.prak7_pam.view
+package com.example.pertemuan7.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
