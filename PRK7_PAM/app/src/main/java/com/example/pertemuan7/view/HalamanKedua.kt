@@ -56,4 +56,31 @@ fun HalamanKedua(
                     shape = RoundedCornerShape(16.dp)
                 ),
             colors = CardDefaults.cardColors(containerColor = Color.LightGray)
-        )
+        ) {
+            Row {
+                Column(modifier = Modifier.padding(20.dp)) {
+                    Text("Nama Lengkap", fontWeight = FontWeight.Bold)
+                    Text("Dzaki Radit")
+
+                    Spacer(modifier = Modifier.height(30.dp))
+
+                    Text("STATUS KAWIN", fontWeight = FontWeight.Bold)
+                    Text("Single")
+                }
+
+                Spacer(modifier = Modifier.height(20.dp))
+
+                Column(modifier = Modifier.padding(20.dp)) {
+                    Text("JENIS KELAMIN", fontWeight = FontWeight.Bold)
+                    Text("Laki-laki")
+
+                    Spacer(modifier = Modifier.height(30.dp))
+
+                    Text("ALAMAT", fontWeight = FontWeight.Bold)
+                    Text("Bandung")
+                }
+            }
+        }
+
+
+
