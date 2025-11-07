@@ -93,3 +93,86 @@ fun FormulirPendaftaran (onBackbtnClick: () -> Unit,
                 modifier = Modifier
                     .padding(top = 9.dp, start = 9.dp)
             )
+            Row {
+                gender.forEach { item ->
+                    Row(
+                        modifier = Modifier.selectable(
+                            selected = textJK == item,
+
+                            onClick = { textJK = item }
+                        ), verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(
+                            selected = textJK == item,
+
+                            onClick = {
+                                textJK = item
+                            })
+                        Text(item)
+                    }
+                }
+            }
+            Text(
+                text = "STATUS KAWIN",
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 20.sp,
+                modifier = Modifier
+                    .padding(top = 9.dp, start = 9.dp)
+            )
+            Row {
+                kawin.forEach { item ->
+                    Row(
+                        modifier = Modifier.selectable(
+                            selected = textStatusPerkawinan == item,
+
+                            onClick = { textStatusPerkawinan = item }
+                        ), verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(
+                            selected = textStatusPerkawinan == item,
+
+                            onClick = {
+                                textStatusPerkawinan = item
+                            })
+                        Text(item)
+                    }
+                }
+            }
+            Text(
+                text = "ALAMAT",
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 20.sp,
+                modifier = Modifier
+                    .padding(top = 9.dp, start = 9.dp)
+            )
+            OutlinedTextField(
+                value = textAlamat,
+                singleLine = true,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 10.dp, end = 10.dp),
+
+                label = { Text(text = "Alamat Lengkap") },
+
+                onValueChange = {
+                    textAlamat = it
+                }
+            )
+            Spacer(modifier = Modifier.height(100.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(top = 20.dp),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Button (modifier = Modifier
+                    .padding(start = 40.dp),
+                    onClick = onBackbtnClick, colors = ButtonDefaults.buttonColors(colorResource(id = R.color.pink_pastel))) {
+                    Text("Beranda", color = Color.Black, fontWeight = FontWeight.Bold, fontFamily = FontFamily.SansSerif)
+                }
+
+                Button(modifier = Modifier
+                    .padding(end = 40.dp),
+                    onClick = {
+                        showDialog = true
+                    }, colors = ButtonDefaults.buttonColors(colorResource(id = R.color.pink_pastel))) {
+                    Text("Submit", color = Color.Black, fontWeight = FontWeight.Bold, fontFamily = FontFamily.SansSerif)
+                }
+            }
+        }
