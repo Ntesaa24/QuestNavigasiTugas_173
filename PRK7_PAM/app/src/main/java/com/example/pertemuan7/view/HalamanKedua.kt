@@ -45,4 +45,15 @@ fun HalamanKedua(
             fontSize = 22.sp,
             fontWeight = FontWeight.Bold,
         )
-
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(all = 16.dp)
+                .height(height = 200.dp)
+                .border(
+                    width = 2.dp,
+                    color = colorResource(id = R.color.black),
+                    shape = RoundedCornerShape(16.dp)
+                ),
+            colors = CardDefaults.cardColors(containerColor = Color.LightGray)
+        )
