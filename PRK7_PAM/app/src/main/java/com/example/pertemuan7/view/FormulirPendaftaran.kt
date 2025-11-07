@@ -33,3 +33,20 @@ import com.example.pertemuan7.R
 @Composable
 fun FormulirPendaftaran (onBackbtnClick: () -> Unit,
                          modifier: Modifier = Modifier){
+
+    var textNama by remember { mutableStateOf("") }
+    var textAlamat by remember { mutableStateOf("") }
+    var textJK by remember { mutableStateOf("") }
+    var textStatusPerkawinan by remember { mutableStateOf("") }
+
+    var showDialog by remember { mutableStateOf(false) }
+
+    //variable-variable untuk menyimpan data yang di peroleh dari komponen UI
+    var nama by remember { mutableStateOf("") }
+    var alamat by remember { mutableStateOf("") }
+    var jenisKelamin by remember { mutableStateOf("") }
+    var status by remember { mutableStateOf("") }
+
+    val kawin:List<String> = listOf("Janda", "Lajang", "Duda")
+    val gender:List<String> = listOf("Laki-laki", "Perempuan")
+
