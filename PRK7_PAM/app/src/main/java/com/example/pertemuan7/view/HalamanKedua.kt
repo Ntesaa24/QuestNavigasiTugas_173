@@ -25,10 +25,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+
 @Composable
 fun HalamanKedua(
-    modifier: Modifier,
-    onBackBtnClick:()->Unit
+    modifier: Modifier = Modifier,
+    onFormClick:()->Unit, onBackbtnClick:()->Unit,
 ) {
     Column(
         modifier = Modifier
@@ -128,14 +129,14 @@ fun HalamanKedua(
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             Button(
-                onClick = { onBackBtnClick() },
+                onClick = { onBackbtnClick() },
                 shape = RoundedCornerShape(8.dp)
             ) {
                 Text("Beranda")
             }
 
             Button(
-                onClick = { onBackBtnClick() },
+                onClick = { onFormClick() },
                 shape = RoundedCornerShape(8.dp)
             ) {
                 Text("Formulir")
