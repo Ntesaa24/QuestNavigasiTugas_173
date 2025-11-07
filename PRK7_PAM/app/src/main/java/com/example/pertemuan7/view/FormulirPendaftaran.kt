@@ -59,3 +59,12 @@ fun FormulirPendaftaran (onBackbtnClick: () -> Unit,
             color = colorResource(id = R.color.pink_tua),
             fontFamily = FontFamily.Serif, modifier = Modifier.padding(10.dp)
         )
+        ElevatedCard(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(600.dp)
+                .padding(all = 12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = colorResource(id = R.color.pink_tua)
+            )
+        )
