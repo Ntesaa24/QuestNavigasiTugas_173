@@ -28,8 +28,8 @@ import com.example.pertemuan7.R
 
 @Composable
 fun TampilanDepan(
-    modifier: Modifier,
-    onMasukClick: () -> Unit
+    modifier: Modifier = Modifier,
+    onMasukClick:()->Unit,
 ){
     Column(
         modifier = Modifier
