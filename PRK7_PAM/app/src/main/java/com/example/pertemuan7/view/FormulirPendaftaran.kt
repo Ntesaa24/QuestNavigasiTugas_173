@@ -50,3 +50,12 @@ fun FormulirPendaftaran (onBackbtnClick: () -> Unit,
     val kawin:List<String> = listOf("Janda", "Lajang", "Duda")
     val gender:List<String> = listOf("Laki-laki", "Perempuan")
 
+    Column(
+        modifier = Modifier.padding(top = 30.dp, bottom = 15.dp)){
+        Text(
+            text = "Formulir Pendaftaran",
+            fontSize = 28.sp,
+            fontWeight = FontWeight.Bold,
+            color = colorResource(id = R.color.pink_tua),
+            fontFamily = FontFamily.Serif, modifier = Modifier.padding(10.dp)
+        )
