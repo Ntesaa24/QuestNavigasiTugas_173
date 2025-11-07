@@ -176,3 +176,18 @@ fun FormulirPendaftaran (onBackbtnClick: () -> Unit,
                 }
             }
         }
+        if(showDialog) {
+            androidx.compose.material3.AlertDialog(
+                onDismissRequest = { showDialog = false },
+                title ={Text("Data Berhasil Disimpan", fontWeight = FontWeight.Bold, fontFamily = FontFamily.SansSerif)},
+                text = {
+                    Text("Nama : $textNama\nJenis Kelamin : $textJK\nStatus : $textStatusPerkawinan\nAlamat : $textAlamat", fontFamily = FontFamily.SansSerif)},
+                    confirmButton = {
+                    Button(onClick = { showDialog = false }, colors = ButtonDefaults.buttonColors(colorResource(id = R.color.pink_tua))) {
+                        Text("OK")
+                    }
+                }
+            )
+        }
+    }
+}
