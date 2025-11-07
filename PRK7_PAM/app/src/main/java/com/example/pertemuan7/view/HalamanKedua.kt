@@ -39,3 +39,10 @@ fun HalamanKedua(
     ) {
         Spacer(modifier = Modifier.height(20.dp))
 
+        //judul halaman
+        Text(
+            text = "List Daftar Peserta",
+            fontSize = 22.sp,
+            fontWeight = FontWeight.Bold,
+        )
+
